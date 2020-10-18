@@ -21,8 +21,19 @@ interface Orphanage {
     longitude: number;
     name: string;
 }
+interface MyPosition{
+    mylatitude: number;
+    mylongitude: number
+}
 function OrphanagesMap() {
     const [orphanages, setOrphanages] = useState<Orphanage[]>([])
+    const [position, setPosition] = useState({latitude: 0, longitude: 0})
+    navigator.geolocation.getCurrentPosition(function(position) {
+        setPosition({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+        })
+    })
     // Orphanages é a variavel e setOrphanages é o responsavel por atualizar essa variavel
     useEffect(() => {
         api.get('orphanages').then(response => {
@@ -45,7 +56,7 @@ function OrphanagesMap() {
                 </footer>
             </aside>
             <Map
-                center={[-9.372775,-40.5800898]}
+                center={[position.latitude, position.longitude]}
                 zoom={15}
                 style={{width: '100%', height: '100%'}}
             >
