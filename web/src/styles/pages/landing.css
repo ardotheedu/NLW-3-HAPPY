@@ -78,3 +78,9 @@
 .content-wrapper .enter-app:hover {
     background: #96feff;
 }
+
+@media (min-width: 1000px) and (max-width: 1600px){
+    #page-landing .content-wrapper {
+        background-size: 44%;
+    }
+}
