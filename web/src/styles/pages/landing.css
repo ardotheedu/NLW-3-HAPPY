@@ -2,7 +2,6 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(329.54deg, #29b6d1, #08c7c7 100%);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +78,7 @@
     background: #96feff;
 }
 
-@media (min-width: 1000px) and (max-width: 1600px){
+@media (max-width: 1400px) {
     #page-landing .content-wrapper {
         background-size: 44%;
     }
