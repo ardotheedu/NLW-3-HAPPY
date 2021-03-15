@@ -78,7 +78,7 @@
     background: #96feff;
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1100px) and (max-width: 1500px) {
     #page-landing .content-wrapper {
         background-size: 44%;
     }
